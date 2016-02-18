@@ -69,7 +69,7 @@ app.controller('CountdownController', function ($scope) {
     };
 
     $scope.startTimer = function() {
-        if ($scope.timerCurrent != null) {
+        if ($scope.timerCurrent != null && $scope.timerCurrent.totalSeconds() > 0) {
             $scope.inputRow.css('pointer-events', 'none');
             $scope.playButton.hide();
             $scope.pauseButton.show();
