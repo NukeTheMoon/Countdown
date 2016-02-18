@@ -1,0 +1,119 @@
+@background: #0c1d23;
+@fancy-black: #07090c;
+@dotconnect-green: #06ff00;
+@dotconnect-blue: #0047fb;
+@input_font-size: 3vw;
+
+h1 {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+}
+h3 {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 15.4px;
+}
+p {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+blockquote {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+pre {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 18.5714px;
+}
+
+input {
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: @input_font-size;
+  text-align: center;
+  border: 0 none;
+  background-color: transparent;
+}
+
+.input-value {
+}
+
+.input-hours {
+}
+
+.input-minutes {
+}
+
+.input-seconds {
+}
+
+.timer {
+  color: white;
+  font-size: 25vw;
+  margin-top: -4vw;
+  margin-bottom: 48px;
+  pointer-events: none;
+}
+
+.input-item {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.input-separator {
+  font-size: @input_font-size;
+  line-height: 1;
+}
+
+.buttons {
+  margin-bottom: 48px;
+  color: @dotconnect-green;
+}
+
+#playButton {
+  margin-right: 24px;
+}
+
+#pauseButton {
+  margin-right: 24px;
+}
+
+*:focus {
+  outline: none;
+}
+
+.main-wrapper {
+  background-color: @background;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  position: fixed;
+}
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

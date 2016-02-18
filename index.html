@@ -3,12 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Countdown</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/countdown.css">
 </head>
-<body>
+<body ng-app="Countdown">
+    <div class="main-wrapper aligner" ng-controller="CountdownController">
 
+        <div class="buttons">
+            <i ng-click="startTimer()" class="fa fa-play fa-2x" id="playButton"></i>
+            <i ng-click="pauseTimer()" class="fa fa-pause fa-2x" id="pauseButton"></i>
+            <i ng-click="resetTimer()" class="fa fa-repeat fa-2x" id="resetButton"></i>
+        </div>
+
+        <div>
+            <h1 class="timer">{{ countdownHours | hours }}:{{ countdownMinutes | minutes }}:{{ countdownSeconds | seconds}}</h1>
+        </div>
+
+        <div id="inputRow" class="col-xs-10 col-sm-6 col-md-4">
+
+            <div class="input-item col-xs-3">
+                <input
+                        class="input-hours"
+                        ng-model-options="{ updateOn: 'blur' }"
+                        ng-model="countdownHoursView"
+                        ng-change="formatHours(countdownHoursView)"
+                        type="text"
+                        maxlength="2"
+                        size="2"
+                        onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                <p>h</p>
+            </div>
+
+            <p class="input-separator col-xs-1">:</p>
+
+            <div class="input-item col-xs-3">
+                <input
+                        class="input-minutes"
+                        ng-model-options="{ updateOn: 'blur' }"
+                        ng-model="countdownMinutesView"
+                        ng-change="formatMinutes(countdownMinutesView)"
+                        type="text"
+                        maxlength="2"
+                        size="2"
+                        onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                <p>m</p>
+            </div>
+
+            <p class="input-separator col-xs-1">:</p>
+
+            <div class="input-item col-xs-3">
+                <input
+                        class="input-seconds"
+                        ng-model-options="{ updateOn: 'blur' }"
+                        ng-model="countdownSecondsView"
+                        ng-change="formatSeconds(countdownSecondsView)"
+                        type="text"
+                        maxlength="2"
+                        size="2"
+                        onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+                <p>s</p>
+            </div>
+
+        </div>
+
+    </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/timespanjs/TimeSpan-1.2.js"></script>
+    <script src="js/countdown.js"></script>
 </body>
 </html>
